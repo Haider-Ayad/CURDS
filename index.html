@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mode"onclick="color(this.id)" id="white"></div>
+    <div class="mode" onclick="color(this.id)" id="black"></div>
+<div class="cruds">
+    <div class="head">
+        <h2>CURDS</h2>
+        <p>Product Management System</p>
+    </div>
+
+    <div class="inputs">
+        <input placeholder="Title" type="text" id="title">
+        <div class="price">
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="Price">
+            <input onkeyup="getTotal()" type="number" id="taxes" placeholder="Taxs">
+            <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads">
+            <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount">
+            <small class="total" id="total" >0</small>
+        </div>
+        <input placeholder="Count" type="number" id="count">
+        <input placeholder="Category" type="text" id="categories">
+        <button id="submit">Create</button>
+    </div>
+    <div class="outputs">
+        <div class="searchBlock">
+            <input type="text" placeholder="Search" id="search" onkeyup=" searchData(this.value)">
+            <div class="btnSearch">
+                <button onClick="getSearcMode(this.id)" id="searchByTitle">Search By Title</button>
+                <button onClick="getSearcMode(this.id)" id="searchByCategory">Search By Category</button>
+            </div>
+            <div id="deleteAll"></div>
+        </div>
+        <table >
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Taxes</th>
+                <th>Ads</th>
+                <th>Discount</th>
+                <th>Category</th>
+                <th>Total</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+            <tbody id="tbody">
+                <tr>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+  <div class="connect">
+    <h2 id="connect_title">
+
+    </h2>
+  </div>
+</body>
+</html>
+<script src="code.js"></script>
